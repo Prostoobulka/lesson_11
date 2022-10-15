@@ -1,0 +1,208 @@
+body{
+	color: #000;
+	font-family: Arial;
+	font-weight: 700;
+	font-size: 22px;
+}
+.wrapper{
+	/* overflow: hidden; */
+	position: relative;
+	min-height: 100%;
+}
+/* ----------------------------------------------- */
+.menu {
+	background: #16b566;
+	min-height: 50px;
+	padding: 15px 15px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	color: #fff;
+}
+.menu__list {
+	font-size: 0;
+}
+.menu__item {
+	display: inline-block;
+	font-size: 22px;
+}
+.menu__item:not(:last-child){
+	margin-right: 10px;
+}
+.menu__item {
+	position: relative;
+}
+.menu__link{
+	display: inline-block;
+	padding: 5px 0;
+}
+.menu__item:hover .submenu{
+	visibility: visible;
+	opacity: 1;
+	top: 100%;
+}
+.menu__submenu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	top: 150%;
+	z-index: 100;
+	opacity: 0;
+	visibility: hidden;
+}
+.submenu {
+	background: #FFD700;
+	min-width: 180px;
+	transition: .5s;
+}
+.submenu__item{
+	padding: 5px 5px;
+}
+.submenu__item:not(:last-child) {
+	margin-bottom: 5px;
+}
+/* ----------------------------------------------- */
+.main__page {
+	position: relative;
+	min-height: 100vh;
+	background: url('../img/bg-cartoon.webp') 0 0 / cover no-repeat;
+	margin-bottom: 50px;
+}
+.car {
+	width: 700px;
+	height: 200px;
+	position: absolute;
+	top: 65%;
+	left: 70%;
+	transform: translate(-50%, -50%);
+}
+.car__shadow {
+	content: "";
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	bottom: -45px;
+	left: 0;
+	border-radius: 50%;
+	z-index: 1;
+	filter: blur(10px);
+}
+.car__body{
+	position: relative;
+	min-height: 100%;
+	background: url('../img/details-car/car-body.png') 50% 50% / cover no-repeat;
+	z-index: 10;
+}
+.car__wheel {
+	position: absolute;
+	background: url('../img/details-car/wheel.png') 50% 0 / contain no-repeat;
+	width: 100px;
+	height: 100px;
+	z-index: 11;
+}
+.car__wheel--left {
+	bottom: -14px;
+	left: 55px;
+}
+.car__wheel--right {
+	bottom: -7px;
+	right: 109px;
+}
+.car__rear-1{
+	position: absolute;
+	top: 75px;
+	left: 43px;
+	background: #000;
+	width: 128px;
+	height: 98px;
+	border-radius: 100% 0% 100% 0% / 67% 100% 0% 33%;
+}
+.car__rear-2{
+	position: absolute;
+   top: 66px;
+   right: 97px;
+   background: #000;
+   width: 132px;
+   height: 101px;
+   border-radius: 34% 66% 100% 0% / 0% 100% 0% 100%;
+   transform: rotate(-6deg);
+}
+.car__headlights{
+	background: rgb(0, 0, 0);
+   width: 25px;
+   height: 25px;
+   position: absolute;
+   top: 91px;
+   left: 6%;
+   z-index: 10;
+   border-radius: 89% 11% 97% 3% / 80% 21% 79% 20%;
+   transform: rotate(14deg);
+}	
+.headlights__basis{
+	width: 15px;
+	height: 15px;
+	background: #fff;
+	border-radius: 89% 11% 97% 3% / 80% 21% 79% 20%;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	
+}
+.headlights__light{
+	width: 15px;
+   height: 11px;
+   position: absolute;
+   background-color: yellow;
+   border-radius: 50%;
+   top: 6px;
+   left: 1px;
+	filter: blur(7px);
+	visibility: hidden;
+	opacity: 0;
+}
+.car__body:hover ~ .car__headlights .headlights__light,
+.car__body:hover ~ .car__headlights .headlights__mirror{
+	visibility: visible;
+	opacity: 1;
+	transition: .5s;
+}
+	.headlights__mirror{
+	width: 400px;
+	height: 200px;
+	position: absolute;
+	background-color: yellow;
+	border-radius: 89% 11% 88% 12% / 80% 42% 58% 20%;
+	top: 52px;
+	left: -438px;
+	filter: blur(60px);
+	visibility: hidden;
+	opacity: 0;
+} 
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+.blocks {
+	height: 1500px;
+}
+.blocks__item {
+	position: sticky;
+	top: 62px;
+	/* left: 0; */
+	padding: 20px;
+	text-align: center;
+	border: 2px solid #000;
+	z-index: 101;
+}
+.blocks__item--blue{
+	background: #168db5;
+}
+.blocks__item--red{
+	background: #b51616;
+}
+.blocks__item--green{
+	background: #16b566;
+}
